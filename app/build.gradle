@@ -18,13 +18,24 @@ repositories {
 }
 
 dependencies {
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.1'
 }
 
 application {
     // Define the main class for the application.
     mainClass = 'id.npad93.p9.App'
+}
+
+mainClassName = 'project.App'
+jar {
+    
+    duplicatesStrategy = 'exclude'
+    manifest {
+        attributes 'Main-Class': 'id.npad93.p9.App.Launcher'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 javafx {

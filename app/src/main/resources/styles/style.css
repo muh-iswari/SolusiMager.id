@@ -1,4 +1,4 @@
-#section-right {
+/* #section-right {
     -fx-background-color: #F5F5DC
 }
 Text {
@@ -40,11 +40,11 @@ Button {
 	-fx-background-radius: 6;
 	-fx-background-color: #DC143C;
 	-fx-text-fill: #fff;
-	-fx-min-width: 100px;
-	-fx-min-height: 40px;
-	-fx-max-width: 200px;
-	-fx-max-height: 80px;
-	-fx-font-size: 18px;
+	-fx-min-width: 50px;
+	-fx-min-height: 20px;
+	-fx-max-width: 100px;
+	-fx-max-height: 40px;
+	-fx-font-size: 13px;
 }
 
 #vBottom {
@@ -71,4 +71,4 @@ Button {
 	-fx-text-fill: #080d13;
 	-fx-font-size: 32px;
 	-fx-font-weight: bold;
-}
+} */
