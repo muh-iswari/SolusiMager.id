@@ -46,19 +46,24 @@ public class MainScene {
         hbPencarian.setMaxSize(455, 40);
         hbPencarian.setMinSize(455, 40);
         hbPencarian.setStyle("-fx-background-color: white; -fx-padding: 10px;");
-        hbPencarian.setAlignment(Pos.CENTER_LEFT);
+        // hbPencarian.setAlignment(Pos.CENTER);
 
 
         ImageView ivAkun = new ImageView("/gambar/akun.png");
         ivAkun.setFitHeight(35);
         ivAkun.setFitWidth(35);
 
+        ImageView ivLogo = new ImageView("/gambar/logo.png");
+        ivLogo.setFitHeight(35);
+        ivLogo.setFitWidth(35);
+
         HBox hbAkun = new HBox(ivAkun);
         hbAkun.setMaxSize(20, 20);
         // hbAkun.setMinSize(30, 30);
-        hbAkun.setStyle("-fx-background-color: red; -fx-padding: 10px;");
+        hbAkun.setStyle("-fx-background-color: red; ");
         
-        HBox hbAtas = new HBox(30,hbPencarian, hbAkun);
+        
+        HBox hbAtas = new HBox(30, ivLogo,hbPencarian, hbAkun);
         hbAtas.setMaxSize(640, 60);
         hbAtas.setMinSize(640, 60);
         hbAtas.setStyle("-fx-background-color: red; -fx-padding: 10px;");
@@ -107,47 +112,48 @@ public class MainScene {
         });
         
         
-        // Membuat bagian bawah
-        // Home
-        Label labelHome = new Label("Home");
-        ImageView ivHome = new ImageView("/gambar/home.png");
-        ivHome.setFitHeight(25);
-        ivHome.setFitWidth(25);
-        VBox vbHome = new VBox(3, ivHome, labelHome);
-        vbHome.setAlignment(Pos.CENTER);
+        // // Membuat bagian bawah
+        // // Home
+        // Label labelHome = new Label("Home");
+        // ImageView ivHome = new ImageView("/gambar/home.png");
+        // ivHome.setFitHeight(25);
+        // ivHome.setFitWidth(25);
+        // VBox vbHome = new VBox(3, ivHome, labelHome);
+        // vbHome.setAlignment(Pos.CENTER);
 
-        // Menu keranjang
-        Label labelTroli = new Label("Troli");
-        labelTroli.setMaxSize(200, 30);
-        labelTroli.setMaxSize(200, 30);
-        ImageView ivTroli = new ImageView("/gambar/home.png");
-        ivTroli.setFitHeight(25);
-        ivTroli.setFitWidth(25);
-        VBox vbTroli = new VBox(3, ivTroli, labelTroli);
-        // vbTroli.setStyle("-fx-background-color: white;");
-        // vbTroli.setMaxSize(100, 5);
-        // vbTroli.setMaxSize(100, 5);
-        vbTroli.setStyle("-fx-background-color: white; -fx-min-width: 50px; -fx-min-height: 20px; -fx-max-width: 100px; -fx-max-height: 40px;");
-        // vbTroli.setAlignment(Pos.CENTER);
-        // Menu Riwayat
-        Label labelRiwayat = new Label("Riwayat");
-        ImageView ivRiwayat = new ImageView("/gambar/home.png");
-        ivRiwayat.setFitHeight(25);
-        ivRiwayat.setFitWidth(25);
-        VBox vbRiwayat = new VBox(3, ivRiwayat, labelRiwayat);
-        // vbTroli.setAlignment(Pos.CENTER);
-        HBox hbBawah = new HBox(vbHome ,vbTroli, vbRiwayat);
-        // hbBawah.setAlignment(Pos.CENTER);
-        // hbBawah.setStyle("-fx-background-color: yellow;");
-        // hbBawah.setMaxSize(640, 35);
-        // hbBawah.setMinSize(640, 35);
-
-
+        // // Menu keranjang
+        // Label labelTroli = new Label("Troli");
+        // labelTroli.setMaxSize(200, 30);
+        // labelTroli.setMaxSize(200, 30);
+        // ImageView ivTroli = new ImageView("/gambar/home.png");
+        // ivTroli.setFitHeight(25);
+        // ivTroli.setFitWidth(25);
+        // VBox vbTroli = new VBox(3, ivTroli, labelTroli);
+        // // vbTroli.setStyle("-fx-background-color: white;");
+        // // vbTroli.setMaxSize(100, 5);
+        // // vbTroli.setMaxSize(100, 5);
+        // vbTroli.setStyle("-fx-background-color: white; -fx-min-width: 50px; -fx-min-height: 20px; -fx-max-width: 100px; -fx-max-height: 40px;");
+        // // vbTroli.setAlignment(Pos.CENTER);
+        // // Menu Riwayat
+        // Label labelRiwayat = new Label("Riwayat");
+        // ImageView ivRiwayat = new ImageView("/gambar/riwayat.png");
+        // ivRiwayat.setFitHeight(25);
+        // ivRiwayat.setFitWidth(25);
+        // VBox vbRiwayat = new VBox(3, ivRiwayat, labelRiwayat);
+        // // vbTroli.setAlignment(Pos.CENTER);
+        HBox hbBawah = new HBox(generateMenuItem());
+        // // hbBawah.setAlignment(Pos.CENTER);
+        // // hbBawah.setStyle("-fx-background-color: yellow;");
+        // // hbBawah.setMaxSize(640, 35);
+        // // hbBawah.setMinSize(640, 35);
 
 
 
 
-        VBox vdAll = new VBox(5, hbAtas, ivBackground,labelKategori,scrollPane, hbLihat, hbBawah);
+
+
+        VBox vdAll = new VBox(5, hbAtas, ivBackground,labelKategori,scrollPane, hbLihat);
+        HBox hbAll =  new HBox(hbBawah, vdAll);
         // vdAll.setMaxSize(640, 480);
         // vdAll.setMinSize(600, 400);
         vdAll.setStyle("-fx-background-color: blue;");
@@ -157,10 +163,65 @@ public class MainScene {
         // VBox vbAll = new VBox(10, vdAll, hbBawah);
 
 
-        Scene scene = new Scene(vdAll, 600, 480);
+        Scene scene = new Scene(hbAll, 600, 480);
         // scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm()
 
         stage.setScene(scene);
+    }
+
+    private HBox[] generateMenuItem() {
+        String[] listImagePath = { "/gambar/home.png", "/gambar/riwayat.png" };
+        String[] listTitle = { "Home", "Riwayat" };
+        HBox[] listHboxMenu = new HBox[2];
+
+        for (int i = 0; i < listHboxMenu.length; i++) {
+            ImageView ivIcon = new ImageView(listImagePath[i]);
+            ivIcon.setFitHeight(10);
+            ivIcon.setFitWidth(10);
+
+            Label labelMenu = new Label(listTitle[i]);
+            labelMenu.getStyleClass().add("label-menu");
+            listHboxMenu[i] = new HBox(ivIcon, labelMenu);
+            listHboxMenu[i].setPadding(new Insets(10, 20, 10, 20));
+            listHboxMenu[i].setSpacing(4);
+            changeMenuStatus(listHboxMenu[i], i == 0 ? true : false);
+        }
+
+        for (int i = 0; i < listHboxMenu.length; i++) {
+            int index = i;
+            listHboxMenu[i].setOnMouseClicked(v -> {
+
+                changeMenuStatus(listHboxMenu[index], true);
+                changeMenu(index + 1);
+
+                for (int j = 0; j < listHboxMenu.length; j++) {
+                    if (index != j) {
+                        changeMenuStatus(listHboxMenu[j], false);
+                    }
+                }
+            });
+        }
+        return listHboxMenu;
+    }
+
+    private void changeMenuStatus(HBox menu, boolean isActive) {
+        if (isActive) {
+            menu.getStyleClass().add("menu-active");
+        } else {
+            menu.getStyleClass().clear();
+        }
+    }
+
+    private void changeMenu(int indexMenu) {
+        switch (indexMenu) {
+            case 1:
+                // showListView();
+                break;
+            case 2:
+                // showTableView();
+            default:
+                break;
+        }
     }
 
 
