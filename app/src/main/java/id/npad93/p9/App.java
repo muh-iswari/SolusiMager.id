@@ -23,8 +23,8 @@ public class App extends Application {
         // firsScene.show();
         // WarungkuScene warungkuScene = new WarungkuScene(stage);
         // warungkuScene.show();
-        // MainScene mainScene = new MainScene(stage);
-        // mainScene.show();
+        MainScene mainScene = new MainScene(stage);
+        mainScene.show();
         stage.setTitle("Calculator");
         stage.setResizable(false);
         stage.show();

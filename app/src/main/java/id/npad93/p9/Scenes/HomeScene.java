@@ -75,7 +75,7 @@ public class HomeScene {
         // VBOX layout
         VBox vLayout = new VBox(ivLogo, tfTitle, lblDesc, space, btnExplore);
         vLayout.setSpacing(8);
-        VBox vbAll = new VBox(30, btnLogIn, vLayout);
+        VBox vbAll = new VBox(50, btnLogIn, vLayout);
         vbAll.setStyle("-fx-padding: 18px;");
 
         vbAll.setAlignment(Pos.TOP_RIGHT);
