@@ -52,10 +52,10 @@
 HBox {
 	-fx-background-color: rgb(207, 74, 74);
 	-fx-background-radius: 5px;
-	-fx-min-width: 300px;
+	/* -fx-min-width: 300px;
 	-fx-min-height: 100px;
 	-fx-max-width: 300px;
-	-fx-max-height: 100px;
+	-fx-max-height: 100px; */
     -fx-fill: "#79E0EE";
 	-fx-padding: 5;
 
