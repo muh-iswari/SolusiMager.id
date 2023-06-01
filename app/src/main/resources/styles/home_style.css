@@ -1,0 +1,38 @@
+.title-text-left {
+	-fx-fill: orange;
+	-fx-font-size: 33px;
+	-fx-font-weight: bold;
+}
+
+.title-text-right {
+	-fx-fill: rgb(254, 237, 206);
+	-fx-font-size: 33px;
+	-fx-font-weight: bold;
+}
+
+.desc-text {
+	-fx-text-fill: "#FFFFFF";
+	-fx-font-size: 14px;
+    -fx-text-border: black;
+}
+
+.btn-explore {
+	-fx-background-color: rgb(254, 237, 206);
+	-fx-text-fill: "#323232";
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+	-fx-min-width: 171px;
+	-fx-min-height: 38px;
+	-fx-background-radius: 42px;
+}
+
+#tombol_logIn {
+	-fx-background-color: orange;
+    -fx-font-size: 12px;
+	-fx-min-width: 70px;
+	-fx-min-height: 30px;
+	-fx-max-width: 100px;
+	-fx-max-height: 30px;
+    -fx-background-radius: 10px;
+    -fx-font-weight: bold;
+}

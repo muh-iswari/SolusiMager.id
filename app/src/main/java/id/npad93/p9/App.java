@@ -3,9 +3,9 @@
  */
 package id.npad93.p9;
 
-import id.npad93.p9.Scenes.FirsScene;
 import id.npad93.p9.Scenes.HomeScene;
 import id.npad93.p9.Scenes.MainScene;
+import id.npad93.p9.Scenes.WarungkuScene;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -17,10 +17,14 @@ public class App extends Application {
         stage = mainStage;
 
         //stage
+        HomeScene homeScene = new HomeScene(stage);
+        homeScene.show();
         // FirsScene firsScene = new FirsScene(stage);
         // firsScene.show();
-        MainScene mainScene = new MainScene(stage);
-        mainScene.show();
+        // WarungkuScene warungkuScene = new WarungkuScene(stage);
+        // warungkuScene.show();
+        // MainScene mainScene = new MainScene(stage);
+        // mainScene.show();
         stage.setTitle("Calculator");
         stage.setResizable(false);
         stage.show();

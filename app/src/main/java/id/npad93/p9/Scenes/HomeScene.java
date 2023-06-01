@@ -1,5 +1,6 @@
 package id.npad93.p9.Scenes;
 
+
 import javax.security.auth.login.LoginContext;
 import javax.swing.Icon;
 
@@ -24,24 +25,38 @@ public class HomeScene {
 
     public HomeScene(Stage stage) {
         this.stage = stage;
+        stage.setTitle("firt-stage");
     }
 
     public void show() {
-        // Membuat label
-        Label labelWarungku = new Label("WarungKu");
-        labelWarungku.setAlignment(Pos.TOP_LEFT);
-        labelWarungku.setStyle("-fx-padding: 10px;");
+        StackPane spLayout = new StackPane();
+        Scene scene = new Scene(spLayout, 640, 480);
+        scene.getStylesheets().add(getClass().getResource("/styles/home_style.css").toExternalForm());
 
-        // Membuat logo
-        ImageView ivlogo = new ImageView("/gambar/logo.png");
-        ivlogo.setFitHeight(40);
-        ivlogo.setFitWidth(40);
+        // Setting background
+        ImageView ivBackground = new ImageView("/gambar/Background.png");
+        ivBackground.setFitWidth(scene.getWidth());
+        ivBackground.setFitHeight(scene.getHeight());
+        spLayout.getChildren().add(ivBackground);
 
-        // Membuat label
-        Label lebelHome = new Label("ini adalah aplikasi yang sangat baik untuk mengatur keuangan warung anda wahai pemilik warung");
-        lebelHome.getStyleClass().add("desc-text");
-        lebelHome.setWrapText(true);
-        lebelHome.setMaxWidth(355);
+        // Text Title
+        Text tLeft = new Text("Solusi");
+        tLeft.getStyleClass().add("title-text-left");
+        Text tRight = new Text("Mager.id");
+        tRight.getStyleClass().add("title-text-right");
+        TextFlow tfTitle = new TextFlow(tLeft, tRight);
+
+        // Top Logo
+        ImageView ivLogo = new ImageView("/gambar/logo.png");
+        ivLogo.setFitHeight(60);
+        ivLogo.setFitWidth(60);
+
+        // Text Desc
+        Label lblDesc = new Label(
+        "Hai! Aku SolusiMager.id. Saya siap memudahkanmu dalam mencari kebutuhan sehari-hari.");
+        lblDesc.getStyleClass().add("desc-text");
+        lblDesc.setWrapText(true);
+        lblDesc.setMaxWidth(355);
 
         // Membuat tombol sign in
         Button btnLogIn = new Button("Log In");
@@ -49,27 +64,34 @@ public class HomeScene {
             LoginScene loginScene = new LoginScene(stage);
             loginScene.show();
         });
-        btnLogIn.setAlignment(Pos.TOP_RIGHT);
+        btnLogIn.setId("tombol_logIn");
 
-        // Membuat tombol warungKu
-        
+        // Button Explore
+        Region space = new Region();
+        space.setPrefHeight(12);
+        Button btnExplore = new Button("Belanja");
+        btnExplore.getStyleClass().add("btn-explore");
 
-        // Membuat HBox
-        HBox atas = new HBox(180, ivlogo, labelWarungku, btnLogIn);
-        atas.setAlignment(Pos.TOP_CENTER);
-        atas.setStyle("-fx-padding: 10px;");
+        // VBOX layout
+        VBox vLayout = new VBox(ivLogo, tfTitle, lblDesc, space, btnExplore);
+        vLayout.setSpacing(8);
+        VBox vbAll = new VBox(30, btnLogIn, vLayout);
+        vbAll.setStyle("-fx-padding: 18px;");
 
-        // Membuat VBox
-        VBox susun = new VBox(100, atas,lebelHome);
-        // susun.setAlignment(Pos.TOP_CENTER);
-
-
-        Scene scene = new Scene(susun, 640, 480);
-        // scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        vbAll.setAlignment(Pos.TOP_RIGHT);
+        spLayout.getChildren().add(vbAll);
+        vLayout.setPadding(new Insets(53));
+        vLayout.setAlignment(Pos.CENTER_LEFT);
 
 
+        // actions
+        btnExplore.setOnAction(v -> {
+            MainScene mainScene = new MainScene(stage);
+            mainScene.show();
+        });
 
         stage.setScene(scene);
     }
 }
+
 

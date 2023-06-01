@@ -1,5 +1,7 @@
 package id.npad93.p9.Scenes;
 
+import javax.security.auth.callback.LanguageCallback;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -32,7 +34,7 @@ public class LoginScene {
         TextField tfName = new TextField();
         tfName.setPromptText("nama");
         TextField tfPass = new TextField();
-        tfName.setPromptText("password");
+        tfPass.setPromptText("password");
         HBox sectionRight = new HBox(6, tfName, tfPass);
         sectionRight.setAlignment(Pos.CENTER);
         Button btnLogIn = new Button("Log In");
@@ -52,5 +54,21 @@ public class LoginScene {
         
         stage.setScene(scene);
     }
+
+    // public void makeProduck() {
+    //     String[] listImagePath = { "/gambar/icon_1.png", "/images/icon_2.png" };
+    //     String[] listTitle = { "Daftar Apoteker", "Daftar Obat" };
+    //     HBox[] listHboxMenu = new HBox[2];
+
+    //     for (int i = 0; i < listHboxMenu.length; i++) {
+    //         ImageView ivIcon = new ImageView(listImagePath[i]);
+    //         Label labelMenu = new Label(listTitle[i]);
+    //         labelMenu.getStyleClass().add("label-menu");
+    //         listHboxMenu[i] = new HBox(ivIcon, labelMenu);
+    //         listHboxMenu[i].setPadding(new Insets(12, 20, 12, 20));
+    //         listHboxMenu[i].setSpacing(4);
+    //     }
+    // }
+
 }
 
