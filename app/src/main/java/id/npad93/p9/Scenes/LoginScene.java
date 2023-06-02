@@ -1,7 +1,7 @@
 package id.npad93.p9.Scenes;
 
 import javax.security.auth.callback.LanguageCallback;
-
+import id.npad93.p9.models.LoginModel;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -20,6 +20,17 @@ import javafx.stage.Stage;
 
 public class LoginScene {
     private Stage stage;
+    private TextField tfName = new TextField();
+    private TextField tfPass = new TextField();
+    
+
+    public LoginScene() {
+    }
+
+    public LoginScene(TextField tfName, TextField tfPass) {
+        this.tfName = tfName;
+        this.tfPass = tfPass;
+    }
 
     public LoginScene(Stage stage) {
         this.stage = stage;
@@ -31,9 +42,7 @@ public class LoginScene {
         // lebelHome.getStyleClass().add("desc-text");
         // lebelHome.setWrapText(true);
         // lebelHome.setMaxWidth(355);
-        TextField tfName = new TextField();
         tfName.setPromptText("nama");
-        TextField tfPass = new TextField();
         tfPass.setPromptText("password");
         HBox sectionRight = new HBox(6, tfName, tfPass);
         sectionRight.setAlignment(Pos.CENTER);
@@ -49,11 +58,22 @@ public class LoginScene {
 
 
         Scene scene = new Scene(susun, 640, 480);
-        // scene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/styles/login_style.css").toExternalForm());
 
-        
+        Mencocokkan(tfName, tfPass);
+
         stage.setScene(scene);
+
     }
+
+    public void Mencocokkan(TextField username, TextField password) {
+        
+    }
+
+    // public static void main(String[] args) {
+    //     // LoginModel.list
+    // }
+
 
     // public void makeProduck() {
     //     String[] listImagePath = { "/gambar/icon_1.png", "/images/icon_2.png" };
@@ -70,5 +90,14 @@ public class LoginScene {
     //     }
     // }
 
+
+
+    public static void main(String[] args) {
+        // Login login = new Login();
+        // login.setUsername(LoginScene.);
+    }
+
+
 }
+
 

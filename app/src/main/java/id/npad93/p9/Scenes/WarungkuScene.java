@@ -28,7 +28,7 @@ public class WarungkuScene {
 
     public void show() {
         ImageView iv1 = new ImageView("/gambar/logo.png");
-        HBox hb1 = new HBox( iv1);
+        HBox hb1 = new HBox(iv1);
         hb1.setAlignment(Pos.CENTER);
         VBox vb1 = new VBox(hb1);
         vb1.setAlignment(Pos.CENTER);

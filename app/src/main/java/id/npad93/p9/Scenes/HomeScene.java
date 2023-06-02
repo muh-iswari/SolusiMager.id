@@ -34,7 +34,7 @@ public class HomeScene {
         scene.getStylesheets().add(getClass().getResource("/styles/home_style.css").toExternalForm());
 
         // Setting background
-        ImageView ivBackground = new ImageView("/gambar/Background.png");
+        ImageView ivBackground = new ImageView("/gambar/bg.png");
         ivBackground.setFitWidth(scene.getWidth());
         ivBackground.setFitHeight(scene.getHeight());
         spLayout.getChildren().add(ivBackground);
@@ -53,7 +53,8 @@ public class HomeScene {
 
         // Text Desc
         Label lblDesc = new Label(
-        "Hai! Aku SolusiMager.id. Saya siap memudahkanmu dalam mencari kebutuhan sehari-hari.");
+        "Hai! Aku SolusiMager.id.\nSaya siap memudahkanmu dalam mencari kebutuhan sehari-hari.");
+        lblDesc.setId("label-Text");
         lblDesc.getStyleClass().add("desc-text");
         lblDesc.setWrapText(true);
         lblDesc.setMaxWidth(355);
@@ -69,13 +70,13 @@ public class HomeScene {
         // Button Explore
         Region space = new Region();
         space.setPrefHeight(12);
-        Button btnExplore = new Button("Belanja");
+        Button btnExplore = new Button("Belanja di sini");
         btnExplore.getStyleClass().add("btn-explore");
 
         // VBOX layout
         VBox vLayout = new VBox(ivLogo, tfTitle, lblDesc, space, btnExplore);
         vLayout.setSpacing(8);
-        VBox vbAll = new VBox(50, btnLogIn, vLayout);
+        VBox vbAll = new VBox(20, btnLogIn, vLayout);
         vbAll.setStyle("-fx-padding: 18px;");
 
         vbAll.setAlignment(Pos.TOP_RIGHT);
@@ -86,8 +87,10 @@ public class HomeScene {
 
         // actions
         btnExplore.setOnAction(v -> {
-            MainScene mainScene = new MainScene(stage);
-            mainScene.show();
+            LoginScene loginScene = new LoginScene(stage);
+            loginScene.show();
+            // MainScene mainScene = new MainScene(stage);
+            // mainScene.show();
         });
 
         stage.setScene(scene);

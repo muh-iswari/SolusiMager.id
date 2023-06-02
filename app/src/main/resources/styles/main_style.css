@@ -25,7 +25,7 @@
     -fx-fill: "#79E0EE";
 }
 
-/* HBox {
+#Botton {
 	-fx-background-color:orange;
     -fx-font-size: 12px;
 	-fx-min-width: 120px;
@@ -35,7 +35,7 @@
     -fx-background-radius: 12px;
     -fx-fill: "#79E0EE";
 
-} */
+}
 
 #lebel {
 	-fx-background-color:rgb(255, 255, 255);
@@ -50,7 +50,7 @@
 }
 
 HBox {
-	-fx-background-color: rgb(207, 74, 74);
+	-fx-background-color: hwb(0 0% 19%);
 	-fx-background-radius: 5px;
 	/* -fx-min-width: 300px;
 	-fx-min-height: 100px;

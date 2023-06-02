@@ -2,12 +2,21 @@
 	-fx-fill: orange;
 	-fx-font-size: 33px;
 	-fx-font-weight: bold;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+	-fx-font-family: "Verdana";
 }
 
 .title-text-right {
-	-fx-fill: rgb(254, 237, 206);
+	-fx-font-family: "Verdana";
+	-fx-fill: rgb(241, 232, 216);
 	-fx-font-size: 33px;
 	-fx-font-weight: bold;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+
+#label-Text {
+	-fx-font-size: 15px;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
 }
 
 .desc-text {
