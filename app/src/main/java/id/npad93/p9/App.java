@@ -25,7 +25,7 @@ public class App extends Application {
         // warungkuScene.show();
         MainScene mainScene = new MainScene(stage);
         mainScene.show();
-        stage.setTitle("Calculator");
+        stage.setTitle("Warungku");
         stage.setResizable(false);
         stage.show();
     }
