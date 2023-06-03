@@ -44,16 +44,16 @@ public class LoginScene {
         // lebelHome.setMaxWidth(355);
         tfName.setPromptText("nama");
         tfPass.setPromptText("password");
-        HBox sectionRight = new HBox(6, tfName, tfPass);
-        sectionRight.setAlignment(Pos.CENTER);
+        VBox vbInput = new VBox(6, tfName, tfPass);
+        vbInput.setAlignment(Pos.CENTER);
         Button btnLogIn = new Button("Log In");
  
         btnLogIn.setOnAction(v -> {
-            MainScene mainScene = new MainScene(stage);
-            mainScene.show();
+            Menu menu = new Menu(stage);
+            menu.show();
         });
 
-        VBox susun = new VBox(5, textHome,sectionRight ,btnLogIn);
+        VBox susun = new VBox(5, textHome,vbInput ,btnLogIn);
         susun.setAlignment(Pos.CENTER);
 
 

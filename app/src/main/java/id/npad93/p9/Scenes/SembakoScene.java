@@ -23,117 +23,53 @@ import javafx.stage.Stage;
 
 public class SembakoScene {
     private Stage stage;
-    private int uang;
+    private int uang = 100000;
+    int stokBeras = 34;
+    int stokMinyak = 20;
+    int stokTerigu = 34;
+    int stokSampo = 20;
+    VBox vbBeras;
+    Label label;
 
     public SembakoScene(Stage stage) {
         this.stage = stage;
     }
 
     public void show() {
-        // Membuat label
-        Label labelWarungku = new Label("SolusiMager.id");
-        labelWarungku.setAlignment(Pos.TOP_LEFT);
-        labelWarungku.setStyle("-fx-padding: 6px;");
-        // labelWarungku.setStyle("-fx-fill: orange;");
-        labelWarungku.setId("judul");
+       // Membuat label
+       Label labelWarungku = new Label("SolusiMager.id");
+       labelWarungku.setId("text");
+       labelWarungku.setAlignment(Pos.CENTER);
+       labelWarungku.setStyle("-fx-padding: 6px;");
+       labelWarungku.setId("judul");
 
-        // Membuat logo
-        ImageView ivlogo = new ImageView("/gambar/logo.png");
-        ivlogo.setFitHeight(40);
-        ivlogo.setFitWidth(40);
+       // Membuat logo
+       Button btnLogout = new Button("Log Out");
+       btnLogout.setId("Logout-button");
+       btnLogout.setOnAction(v -> {
+           HomeScene homeScene = new HomeScene(stage);
+           homeScene.show();
+       });
 
+       // Membuat tombol Kembali
+       Button btnBack = new Button("Back");
+       btnBack.setId("back-button");
+       btnBack.setOnAction(v -> {
+           Menu menu = new Menu(stage);
+           menu.show();
+       });
 
-        // Membuat tombol sign in
-        Button btnLogIn = new Button("Log In");
-        btnLogIn.setOnAction(v -> {
-            LoginScene loginScene = new LoginScene(stage);
-            loginScene.show();
-        });
-        // btnLogIn.setAlignment(Pos.CENTER_RIGHT);
-        btnLogIn.setId("tombol_logIn");
-
-        // Membuat tombol warungKu
-        
-        // Membuat HBox
-        HBox atas = new HBox(150, ivlogo, labelWarungku, btnLogIn);
-        atas.setAlignment(Pos.CENTER);
-        atas.setLayoutX(100);
-        atas.setId("atas");
-        atas.setStyle("-fx-padding: 30px;");
-        // atas.setStyle("-fx-background-color: orange");
-        // atas.setStyle("-fx-background-radius: 42px;");
-
-
-        // // Membuat Menu
-        // Label lbMenu = new Label("Menu");
-        // lbMenu.setAlignment(Pos.CENTER);
-        // lbMenu.setStyle("-fx-font-size: 15px");
-        // HBox hbLabelMenu = new HBox(lbMenu);
-        // hbLabelMenu.setMaxSize(120, 30);
-        // hbLabelMenu.setAlignment(Pos.CENTER);
-        // hbLabelMenu.setId("hbox-label");
-
-        // Label lBelanja = new Label("Belanja");
-        // lBelanja.setAlignment(Pos.CENTER);
-        // Image imgBelanja = new Image("/gambar/produck.jpg");
-        // ImageView ivBelanja= new ImageView(imgBelanja);
-        // ivBelanja.setFitHeight(30);
-        // ivBelanja.setFitWidth(30);
-        // HBox hbBelanja = new HBox(3, ivBelanja, lBelanja);
-        // hbBelanja.setAlignment(Pos.CENTER);
-        // hbBelanja.setStyle("-fx-background-color: orange");
-        // hbBelanja.setMaxSize(120, 35);
-        // hbBelanja.setMinSize(120, 35);
-        // hbBelanja.setId("lebel");
-
-        // Label lTroli = new Label("Troli");
-        // lTroli.setAlignment(Pos.CENTER);
-        // Image imgTroli = new Image("/gambar/produck.jpg");
-        // ImageView ivTroli= new ImageView(imgTroli);
-        // ivTroli.setFitHeight(30);
-        // ivTroli.setFitWidth(30);
-        // HBox hbTroli = new HBox(3, ivTroli, lTroli);
-        // hbTroli.setAlignment(Pos.CENTER);
-        // hbTroli.setStyle("-fx-background-color: orange");
-        // hbTroli.setMaxSize(120, 35);
-        // hbTroli.setMinSize(120, 35);
-        // hbTroli.setId("lebel");
-
-        // Label lRiwayat = new Label("Riwayat");
-        // lRiwayat.setAlignment(Pos.CENTER);
-        // Image imgRiwayat = new Image("/gambar/produck.jpg");
-        // ImageView ivRiwayat= new ImageView(imgRiwayat);
-        // ivRiwayat.setFitHeight(30);
-        // ivRiwayat.setFitWidth(30);
-        // HBox hbRiwayat = new HBox(3, ivRiwayat, lRiwayat);
-        // hbRiwayat.setAlignment(Pos.CENTER);
-        // hbRiwayat.setStyle("-fx-background-color: orange");
-        // hbRiwayat.setMaxSize(120, 35);
-        // hbRiwayat.setMinSize(120, 35);
-        // hbRiwayat.setId("lebel");
-
-        // Label lWarungku = new Label("Warungku");
-        // lWarungku.setAlignment(Pos.CENTER);
-        // Image imgWarungku = new Image("/gambar/produck.jpg");
-        // ImageView ivWarungku= new ImageView(imgWarungku);
-        // ivWarungku.setFitHeight(30);
-        // ivWarungku.setFitWidth(30);
-        // HBox hbWarungku = new HBox(3, ivWarungku, lWarungku);
-        // hbWarungku.setAlignment(Pos.CENTER);
-        // hbWarungku.setStyle("-fx-background-color: orange");
-        // hbWarungku.setMaxSize(120, 35);
-        // hbWarungku.setMinSize(120, 35);
-        // hbWarungku.setId("lebel");
-        // hbWarungku.setOnMouseClicked(v->{
-        //     MainScene mainScene = new MainScene(stage);
-        //     mainScene.show();
-        // });
+       // Membuat HBox atas
+       HBox atas = new HBox(150, btnBack, labelWarungku, btnLogout);
+       atas.setAlignment(Pos.TOP_CENTER);
+       atas.setMaxSize(640, 20);
+       atas.setId("atas");
+       atas.setStyle("-fx-padding: 4px;");
 
 
         // Membuat produck 
         // Membuat Beras 
         int hargaBeras = 10000;
-        int stokBeras = 34;
         ImageView ivBeras = new ImageView("/gambar/beras.jpg");
         ivBeras.setFitHeight(150);
         ivBeras.setFitWidth(150);
@@ -146,14 +82,28 @@ public class SembakoScene {
         lbBeras.setWrapText(true);
         lbBeras.setMaxWidth(355);
         Button beliBeras = new Button("Beli");
+        beliBeras.setOnAction(event -> {
+            if (uang >= hargaBeras && stokBeras > 0) {
+                uang -= hargaBeras;
+                stokBeras-=1;
+                lbStokBeras.setText("Stok : " + stokBeras);
+            } else {
+                if (!lbStokBeras.getStyle().equals("-fx-text-fill: red;")) {
+                    lbStokBeras.setText("Maaf, saldo anda  tidak mencukupi");
+                    lbStokBeras.setWrapText(true);
+                    lbStokBeras.setMaxWidth(100);
+                    lbStokBeras.setStyle("-fx-text-fill: red;");
+                }
+            }
+        });
+
+
         // Gabungkan kedlam VBox
-        VBox vbBeras = new VBox(10, lbBeras, lbStokBeras, lbHargaBeras, beliBeras);
+        vbBeras = new VBox(10, lbBeras, lbStokBeras, lbHargaBeras, beliBeras);
         HBox hbBeras = new HBox(7, ivBeras, vbBeras);
         // hbBeras.setStyle("-fx-background-colour: red");
 
         int hargaMinyak = 18000;
-        int stokMinyak;
-        stokMinyak = 23;
         ImageView ivMinyak = new ImageView("/gambar/tropical.jpg");
         ivMinyak.setFitHeight(150);
         ivMinyak.setFitWidth(150);
@@ -164,21 +114,24 @@ public class SembakoScene {
         Label lbStokMinyak = new Label("Stok : Rp. " + Integer.toString(stokMinyak));
         lbMinyak.setWrapText(true);
         lbMinyak.setMaxWidth(355);
-        Button beliMinyak = new Button("Beli");
+        Button beliMinyak = new Button("Beli"); 
+        // Tombol Beli Minyak
         beliMinyak.setOnAction(event -> {
-            if (uang >= hargaMinyak) {
-                if (stokMinyak > 0) {
-                    // stokMinyak -= 1;
-                    uang -= hargaMinyak;
-                    // updateStockLabel();
-                    System.out.println("Item purchased!");
-                } else {
-                    System.out.println("Out of stock!");
-                }
+            if (uang >= hargaMinyak && stokMinyak > 0) {
+                uang -= hargaMinyak;
+                stokMinyak-=1;
+                lbStokMinyak.setText("Stok : " + stokMinyak);
             } else {
-                System.out.println("Not enough money!");
+                if (!lbStokMinyak.getStyle().equals("-fx-text-fill: red;")) {
+                    lbStokMinyak.setText("Maaf, saldo anda  tidak mencukupi");
+                    lbStokMinyak.setWrapText(true);
+                    lbStokMinyak.setMaxWidth(100);
+                    lbStokMinyak.setStyle("-fx-text-fill: red;");
+                }
             }
         });
+
+
         // Gabungkan kedlam VBox
         VBox vbMinyak = new VBox(10, lbMinyak, lbStokMinyak, lbHargaMinyak, beliMinyak);
         HBox hbMinyak = new HBox(7, ivMinyak, vbMinyak);
@@ -191,7 +144,6 @@ public class SembakoScene {
 
         // Membuat Beras 
         int hargaTerigu = 10000;
-        int stokTerigu = 34;
         ImageView ivTerigu = new ImageView("/gambar/Terigu.jpg");
         ivTerigu.setFitHeight(150);
         ivTerigu.setFitWidth(150);
@@ -203,14 +155,30 @@ public class SembakoScene {
         Label lbStokTerigu = new Label("Stok : " + Integer.toString(stokTerigu));
         lbTerigu.setWrapText(true);
         lbTerigu.setMaxWidth(355);
-        Button beliTerigu = new Button("Beli");
+        Button beliTerigu = new Button("Beli"); 
+        // Tombol Beli Terigu
+        beliTerigu.setOnAction(event -> {
+            if (uang >= hargaTerigu && stokTerigu > 0) {
+                uang -= hargaTerigu;
+                stokTerigu-=1;
+                lbStokTerigu.setText("Stok : " + stokTerigu);
+            } else {
+                if (!lbStokTerigu.getStyle().equals("-fx-text-fill: red;")) {
+                    lbStokTerigu.setText("Maaf, saldo anda  tidak mencukupi");
+                    lbStokTerigu.setWrapText(true);
+                    lbStokTerigu.setMaxWidth(100);
+                    lbStokTerigu.setStyle("-fx-text-fill: red;");
+                }
+            }
+        });
+
+
         // Gabungkan kedlam VBox
         VBox vbTerigu = new VBox(10, lbTerigu, lbStokTerigu, lbHargaTerigu, beliTerigu);
         HBox hbTerigu = new HBox(7, ivTerigu, vbTerigu);
         // hbTerigu.setStyle("-fx-background-colour: red");
 
         int hargaSampo = 18000;
-        int stokSampo = 20;
         ImageView ivSampo = new ImageView("/gambar/Sampo.jpg");
         ivSampo.setFitHeight(150);
         ivSampo.setFitWidth(150);
@@ -221,7 +189,25 @@ public class SembakoScene {
         Label lbStokSampo = new Label("Stok : " + Integer.toString(stokSampo));
         lbSampo.setWrapText(true);
         lbSampo.setMaxWidth(355);
-        Button beliSampo = new Button("Beli");
+        Button beliSampo = new Button("Beli"); 
+        // Tombol Beli Sampo
+        beliSampo.setOnAction(event -> {
+            if (uang >= hargaSampo && stokSampo > 0) {
+                uang -= hargaSampo;
+                stokSampo-=1;
+                lbStokSampo.setText("Stok : " + stokSampo);
+            } else {
+                if (!lbStokSampo.getStyle().equals("-fx-text-fill: red;")) {
+                    lbStokSampo.setText("Maaf, saldo anda  tidak mencukupi");
+                    lbStokSampo.setWrapText(true);
+                    lbStokSampo.setMaxWidth(100);
+                    lbStokSampo.setStyle("-fx-text-fill: red;");
+                }
+            }
+        });
+        
+
+
         // Gabungkan kedlam VBox
         VBox vbSampo = new VBox(10, lbSampo, lbStokSampo, lbHargaSampo, beliSampo);
         HBox hbSampo = new HBox(7, ivSampo, vbSampo);
@@ -248,6 +234,5 @@ public class SembakoScene {
         stage.setScene(scene);
     } 
 }
-
 
 

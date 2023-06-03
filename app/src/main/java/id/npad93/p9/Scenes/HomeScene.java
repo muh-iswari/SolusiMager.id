@@ -60,12 +60,12 @@ public class HomeScene {
         lblDesc.setMaxWidth(355);
 
         // Membuat tombol sign in
-        Button btnLogIn = new Button("Log In");
-        btnLogIn.setOnAction(v -> {
-            LoginScene loginScene = new LoginScene(stage);
-            loginScene.show();
-        });
-        btnLogIn.setId("tombol_logIn");
+        // Button btnLogIn = new Button("Log In");
+        // btnLogIn.setOnAction(v -> {
+        //     LoginScene loginScene = new LoginScene(stage);
+        //     loginScene.show();
+        // });
+        // btnLogIn.setId("tombol_logIn");
 
         // Button Explore
         Region space = new Region();
@@ -74,11 +74,11 @@ public class HomeScene {
         btnExplore.getStyleClass().add("btn-explore");
 
         // VBOX layout
-        VBox vLayout = new VBox(ivLogo, tfTitle, lblDesc, space, btnExplore);
-        vLayout.setSpacing(8);
-        VBox vbAll = new VBox(20, btnLogIn, vLayout);
+        VBox vtengah = new VBox(ivLogo, tfTitle, lblDesc, space);
+        VBox vLayout = new VBox(20, vtengah, btnExplore);
+        vtengah.setSpacing(10);
+        VBox vbAll = new VBox(20,  vLayout);
         vbAll.setStyle("-fx-padding: 18px;");
-
         vbAll.setAlignment(Pos.TOP_RIGHT);
         spLayout.getChildren().add(vbAll);
         vLayout.setPadding(new Insets(53));
