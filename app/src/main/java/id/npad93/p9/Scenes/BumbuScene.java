@@ -173,7 +173,7 @@ public class BumbuScene {
         lbProduck2.getStyleClass().add("desc-text");
         lbProduck2.setWrapText(true);
         lbProduck2.setMaxWidth(150);
-        Label lbHarga2 = new Label("Harga : Rp. " + Integer.toString(harga[1]));
+        Label lbHarga2 = new Label("Harga : Rp. " + Integer.toString(harga[2]));
         Label lbStok2 = new Label("Stok : " + Integer.toString(stock[1]));
         Button beliProduck2 = new Button("Beli"); 
         // Tombol Beli Produck2
