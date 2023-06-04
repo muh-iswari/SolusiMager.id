@@ -67,7 +67,9 @@ public class SembakoScene {
        atas.setStyle("-fx-padding: 4px;");
 
 
-        // Membuat produck 
+        {"/gambar/beras.jpg", "/gambar/tropical.jpg", "/gambar/Terigu.jpg"}
+       
+       // Membuat produck 
         // Membuat Beras 
         int hargaBeras = 10000;
         ImageView ivBeras = new ImageView("/gambar/beras.jpg");
@@ -104,7 +106,7 @@ public class SembakoScene {
         // hbBeras.setStyle("-fx-background-colour: red");
 
         int hargaMinyak = 18000;
-        ImageView ivMinyak = new ImageView("/gambar/tropical.jpg");
+        ImageView ivMinyak = new ImageView("/gambar/tropical.jpg", "/gambar/Terigu.jpg");
         ivMinyak.setFitHeight(150);
         ivMinyak.setFitWidth(150);
         Label lbMinyak = new Label("Minyak tropical 1 Liter");

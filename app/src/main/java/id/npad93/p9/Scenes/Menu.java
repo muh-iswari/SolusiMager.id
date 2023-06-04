@@ -60,8 +60,8 @@ public class Menu extends Application {
         Button btn2 = new Button("Perawatan Tubuh");
         btn2.setId("button");
         btn2.setOnAction(v -> {
-            MenuPerawatanTubuh menuPerawatanTubuh = new MenuPerawatanTubuh(stage);
-            menuPerawatanTubuh.kategori();
+            PTubuhScene pTubuhScene = new PTubuhScene(stage);
+            pTubuhScene.show();
         });
         Button btn3 = new Button("Makanan Instan");
         btn3.setOnAction(v -> {
