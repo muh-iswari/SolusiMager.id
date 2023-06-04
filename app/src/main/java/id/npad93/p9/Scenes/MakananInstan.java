@@ -86,7 +86,7 @@ public class MakananInstan {
  
  
          Scene scene = new Scene(susun, 640, 480);
-         scene.getStylesheets().add(getClass().getResource("/styles/main_style.css").toExternalForm());
+         scene.getStylesheets().add(getClass().getResource("/styles/menu_style.css").toExternalForm());
  
  
          stage.setScene(scene);

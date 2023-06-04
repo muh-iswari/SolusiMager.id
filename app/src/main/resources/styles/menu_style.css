@@ -1,0 +1,74 @@
+#judul {
+	-fx-fill: rgb(0, 0, 0);
+	-fx-font-size: 20px;
+    -fx-font-family: "Arial";
+	-fx-font-weight: bold;
+}
+
+#tombol {
+	-fx-background-color: rgb(231, 220, 198);
+	-fx-font-weight: bold;
+    -fx-font-size: 14px;
+	-fx-min-width: 250px;
+	-fx-min-height: 40px;
+	-fx-max-width: 250px;
+	-fx-max-height: 40px;
+    -fx-background-radius: 10px;
+}
+
+#atas {
+	-fx-background-color: rgb(255, 221, 158);
+	-fx-min-width: 640px;
+	-fx-min-height: 40px;
+	-fx-max-width: 640px;
+	-fx-max-height: 40px;
+    -fx-fill: "#79E0EE";
+}
+
+#Botton {
+	-fx-background-color:#e4bd74;
+    -fx-font-size: 12px;
+	-fx-min-width: 120px;
+	-fx-min-height: 35px;
+	-fx-max-width: 120px;
+	-fx-max-height: 35px;
+    -fx-background-radius: 12px;
+    -fx-fill: "#79E0EE";
+
+}
+
+#lebel {
+	-fx-background-color:rgb(255, 255, 255);
+    -fx-font-size: 12px;
+	-fx-min-width: 120px;
+	-fx-min-height: 20px;
+	-fx-max-width: 100px;
+	-fx-max-height: 20px;
+    -fx-background-radius: 7px;
+    -fx-fill: "#79E0EE";
+
+}
+
+
+#Logout-button {
+	-fx-background-color: rgb(255, 0, 0);
+    -fx-font-size: 12px;
+	-fx-min-width: 20px;
+	-fx-min-height: 30px;
+	-fx-max-width: 300px;
+	-fx-max-height: 20px;
+    -fx-background-radius: 7px;
+    -fx-font-weight: bold;
+}
+
+
+#back-button {
+	-fx-background-color: rgb(237, 236, 158);
+    -fx-font-size: 12px;
+	-fx-min-width: 20px;
+	-fx-min-height: 30px;
+	-fx-max-width: 100px;
+	-fx-max-height: 20px;
+    -fx-background-radius: 7px;
+    -fx-font-weight: bold;
+}

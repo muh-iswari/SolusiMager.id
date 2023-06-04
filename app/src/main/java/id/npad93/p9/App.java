@@ -4,7 +4,6 @@
 package id.npad93.p9;
 
 import id.npad93.p9.Scenes.HomeScene;
-import id.npad93.p9.Scenes.LoginScene;
 import id.npad93.p9.Scenes.MakananRinganScene;
 import id.npad93.p9.Scenes.BumbuScene;
 import id.npad93.p9.Scenes.Menu;

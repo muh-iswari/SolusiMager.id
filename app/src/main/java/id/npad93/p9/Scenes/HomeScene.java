@@ -46,10 +46,9 @@ public class HomeScene {
         tRight.getStyleClass().add("title-text-right");
         TextFlow tfTitle = new TextFlow(tLeft, tRight);
 
-        // Top Logo
-        ImageView ivLogo = new ImageView("/gambar/logo.png");
-        ivLogo.setFitHeight(60);
-        ivLogo.setFitWidth(60);
+
+        
+
 
         // Text Desc
         Label lblDesc = new Label(
@@ -59,14 +58,6 @@ public class HomeScene {
         lblDesc.setWrapText(true);
         lblDesc.setMaxWidth(355);
 
-        // Membuat tombol sign in
-        // Button btnLogIn = new Button("Log In");
-        // btnLogIn.setOnAction(v -> {
-        //     LoginScene loginScene = new LoginScene(stage);
-        //     loginScene.show();
-        // });
-        // btnLogIn.setId("tombol_logIn");
-
         // Button Explore
         Region space = new Region();
         space.setPrefHeight(12);
@@ -74,10 +65,11 @@ public class HomeScene {
         btnExplore.getStyleClass().add("btn-explore");
 
         // VBOX layout
-        VBox vtengah = new VBox(ivLogo, tfTitle, lblDesc, space);
+        VBox vtengah = new VBox(tfTitle, lblDesc, space);
         VBox vLayout = new VBox(20, vtengah, btnExplore);
         vtengah.setSpacing(10);
         VBox vbAll = new VBox(20,  vLayout);
+        vbAll.setAlignment(Pos.CENTER);
         vbAll.setStyle("-fx-padding: 18px;");
         vbAll.setAlignment(Pos.TOP_RIGHT);
         spLayout.getChildren().add(vbAll);
@@ -87,8 +79,8 @@ public class HomeScene {
 
         // actions
         btnExplore.setOnAction(v -> {
-            LoginScene loginScene = new LoginScene(stage);
-            loginScene.show();
+            Menu menu = new Menu(stage);
+            menu.show();
             // MainScene mainScene = new MainScene(stage);
             // mainScene.show();
         });

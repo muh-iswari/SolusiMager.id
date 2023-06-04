@@ -5,7 +5,9 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -51,29 +53,33 @@ public class Menu extends Application {
 
         // Membuat VBox vbKategori
         Text pilihan = new Text("Pilih Kategori");
+        pilihan.setId("judul");
         Button btn1 = new Button("Sembako");
-        btn1.setId("button");
+        btn1.setId("tombol");
         btn1.setOnAction(v -> {
             MenuSembako menuSembako = new MenuSembako(stage);
             menuSembako.kategori();
         });
         Button btn2 = new Button("Perawatan Tubuh");
-        btn2.setId("button");
+        btn2.setId("tombol");
         btn2.setOnAction(v -> {
             PTubuhScene pTubuhScene = new PTubuhScene(stage);
             pTubuhScene.show();
         });
         Button btn3 = new Button("Makanan Instan");
+        btn3.setId("tombol");
         btn3.setOnAction(v -> {
             MenuMakananInstan menuMakananInstan = new MenuMakananInstan(stage);
             menuMakananInstan.kategori();
         });
         Button btn4 = new Button("Bumbu Masak");
+        btn4.setId("tombol");
         btn4.setOnAction(v -> {
             MenuBumbuMasak menuBumbuMasak = new MenuBumbuMasak(stage);
             menuBumbuMasak.kategori();
         });
         Button btn5 = new Button("Makanan Ringan");
+        btn5.setId("tombol");
         btn5.setOnAction(v -> {
             MenuMakananRingan menuMakananRingan = new MenuMakananRingan(stage);
             menuMakananRingan.kategori();
@@ -86,10 +92,11 @@ public class Menu extends Application {
         vbPilihan.setAlignment(Pos.CENTER);
 
         // Membuat VBox all
-        VBox all = new VBox(100, atas, vbPilihan);
+        VBox all = new VBox(50, atas, vbPilihan);
+
 
         Scene scene = new Scene(all, 640, 480);
-        scene.getStylesheets().add(getClass().getResource("/styles/main_style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/styles/menu_style.css").toExternalForm());
 
         stage.setScene(scene);
     }
