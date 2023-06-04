@@ -72,3 +72,38 @@ Button {
 	-fx-font-size: 32px;
 	-fx-font-weight: bold;
 } */
+
+#judul {
+	-fx-fill: rgb(231, 220, 198);
+	-fx-font-size: 20px;
+    -fx-font-family: "Arial";
+	-fx-font-weight: bold;
+}
+
+#tombol-logIn {
+	-fx-border: none;
+	-fx-border-radius: 10px;
+	-fx-color: white;
+	-fx-background-color: orange;
+	-fx-padding: 1em 2em;
+}
+
+Button {
+	-fx-border: none;
+	-fx-border-radius: 10px;
+	-fx-text-fill: orange;
+	-fx-background-color: white;
+	-fx-padding: 1em 2em;
+}
+
+Label {
+	-fx-text-fill: black;
+}
+
+TextField {
+	-fx-border-radius: 10px;
+	-fx-width: 4em;
+	-fx-height: 2em;
+	-fx-font-size: 16px;
+	-fx-text-fill: black;
+}
