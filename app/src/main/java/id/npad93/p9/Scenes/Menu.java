@@ -168,3 +168,4 @@ class MenuMakananRingan extends PilihanMenu {
     }
 
 }
+
