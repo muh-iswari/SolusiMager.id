@@ -26,7 +26,7 @@
 }
 
 #Botton {
-	-fx-background-color:orange;
+	-fx-background-color: orange;
     -fx-font-size: 12px;
 	-fx-min-width: 120px;
 	-fx-min-height: 35px;
@@ -34,7 +34,6 @@
 	-fx-max-height: 35px;
     -fx-background-radius: 12px;
     -fx-fill: "#79E0EE";
-
 }
 
 #lebel {

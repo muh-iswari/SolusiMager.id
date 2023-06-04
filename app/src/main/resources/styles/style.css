@@ -1,0 +1,109 @@
+/* #section-right {
+    -fx-background-color: #F5F5DC
+}
+Text {
+    -fx-font-size: 24px;
+}
+
+
+@font-face {
+	font-family: "Midnew";
+	src: local("sample"), url("../fonts/midnew.ttf") format("truetype");
+} 
+
+#title {
+	-fx-text-fill: #db9a38;
+	-fx-font-weight: bold;
+	-fx-font-size: 24px;
+	-fx-font-family: "Arries";
+}
+
+StackPane {
+	-fx-background-color: #0e1822;
+}
+
+Label {
+	-fx-text-fill: #696969;
+	-fx-font-size: 18px;
+}
+
+TextField {
+	-fx-background-radius: 6;
+	-fx-min-width: 100px;
+	-fx-min-height: 40px;
+	-fx-max-width: 200px;
+	-fx-max-height: 80px;
+	-fx-font-size: 16px;
+}
+
+Button {
+	-fx-background-radius: 6;
+	-fx-background-color: #DC143C;
+	-fx-text-fill: #fff;
+	-fx-min-width: 50px;
+	-fx-min-height: 20px;
+	-fx-max-width: 100px;
+	-fx-max-height: 40px;
+	-fx-font-size: 13px;
+}
+
+#vBottom {
+	-fx-min-height: 200px;
+	-fx-min-width: 100px;
+	-fx-max-width: 200px;
+}
+
+#vResult {
+	-fx-background-radius: 15;
+	-fx-min-height: 200px;
+	-fx-min-width: 100px;
+	-fx-max-width: 200px;
+	-fx-padding: 5;
+}
+
+#lResult {
+	-fx-text-fill: #080d13;
+	-fx-font-size: 20px;
+	-fx-font-weight: bold;
+}
+
+#lBmi {
+	-fx-text-fill: #080d13;
+	-fx-font-size: 32px;
+	-fx-font-weight: bold;
+} */
+
+#judul {
+	-fx-fill: rgb(231, 220, 198);
+	-fx-font-size: 20px;
+    -fx-font-family: "Arial";
+	-fx-font-weight: bold;
+}
+
+#tombol-logIn {
+	-fx-border: none;
+	-fx-border-radius: 10px;
+	-fx-color: white;
+	-fx-background-color: orange;
+	-fx-padding: 1em 2em;
+}
+
+Button {
+	-fx-border: none;
+	-fx-border-radius: 10px;
+	-fx-text-fill: orange;
+	-fx-background-color: white;
+	-fx-padding: 1em 2em;
+}
+
+Label {
+	-fx-text-fill: black;
+}
+
+TextField {
+	-fx-border-radius: 10px;
+	-fx-width: 4em;
+	-fx-height: 2em;
+	-fx-font-size: 16px;
+	-fx-text-fill: black;
+}

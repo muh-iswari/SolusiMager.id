@@ -15,11 +15,10 @@ import javafx.stage.Stage;
 public class BumbuScene {
     private Stage stage;
     private int uang = 100000;
-    String[] listImagePath = {"/gambar/foto-makanan-instan/indomie.jpg", "/gambar/foto-makanan-instan/tok-poki.jpg", 
-    "/gambar/foto-makanan-instan/bubur.jpg", "/gambar/foto-makanan-instan/kornet.jpg", 
-    "/gambar/foto-makanan-instan/sarden.jpg", "/gambar/foto-makanan-instan/sedap.jpg" };
-    String[] nama = {"Indomie goreng 1 box isi 50 pcs", "Tok-poki", "bubur instan merek Super Bubur", 
-    "kornet daging sapi Pronas ", "Sardines ABC saus cabai 425 gram", "Mie sedap cup"};
+    String[] listImagePath = {"/gambar/royco.jpg", "/gambar/ladaku.jpg", 
+    "/gambar/saus tomat.jpg", "/gambar/kecap.jpg", "/gambar/sambal.jpg"};
+    String[] nama = {"Royco 460g", "Ladaku Sachet", "ABC Saus Tomat 275ml", 
+    "ABC Kecap Pedas Manis 135ml", "Uleg Sambal Bawang 1pack"};
     int[] stock = {19, 12, 32, 10, 5, 8};
     int[] harga = {65000, 8000, 5000, 30000, 21000, 5000};
 
@@ -173,7 +172,8 @@ public class BumbuScene {
         lbProduck2.getStyleClass().add("desc-text");
         lbProduck2.setWrapText(true);
         lbProduck2.setMaxWidth(150);
-        Label lbHarga2 = new Label("Harga : Rp. " + Integer.toString(harga[1]));
+        lbProduck2.setStyle("-fx-font-weight: bold;");
+        Label lbHarga2 = new Label("Harga : Rp. " + Integer.toString(harga[2]));
         Label lbStok2 = new Label("Stok : " + Integer.toString(stock[1]));
         Button beliProduck2 = new Button("Beli"); 
         // Tombol Beli Produck2
@@ -193,7 +193,7 @@ public class BumbuScene {
         hbMenu.setId("produck");
 
 
-
+        
 
         // Membuat Produck 3 dan 4
         // Produk sebelah kanan
@@ -227,6 +227,7 @@ public class BumbuScene {
         lbPProduck4.getStyleClass().add("desc-text");
         lbPProduck4.setWrapText(true);
         lbPProduck4.setMaxWidth(150);
+        lbPProduck4.setStyle("-fx-font-weight: bold;");
         Label lbHarga4 = new Label("Harga : Rp. " + Integer.toString(harga[3]));
         Label lbStok4 = new Label("Stok : " + Integer.toString(stock[3]));
         Button beliPProduck4 = new Button("Beli"); 
@@ -280,6 +281,7 @@ public class BumbuScene {
         lbPProduck6.getStyleClass().add("desc-text");
         lbPProduck6.setWrapText(true);
         lbPProduck6.setMaxWidth(150);
+        lbPProduck6.setStyle("-fx-font-weight: bold;");
         Label lbHarga6 = new Label("Harga : Rp. " + Integer.toString(harga[5]));
         Label lbStok6 = new Label("Stok : " + Integer.toString(stock[5]));
         Button beliPProduck6 = new Button("Beli"); 
