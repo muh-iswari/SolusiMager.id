@@ -151,8 +151,8 @@ class MenuMakananInstan extends PilihanMenu {
 
     @Override
     public void kategori() {
-        HomeScene homeScene = new HomeScene(stage);
-        homeScene.show();
+        MakananInstan makananInstan = new MakananInstan(stage);
+        makananInstan.show();
     }
 }
     
