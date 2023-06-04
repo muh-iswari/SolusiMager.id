@@ -3,7 +3,6 @@
 
 }
 
-
 #judul {
 	-fx-text-fill:#cacaca;
 	-fx-font-family: "Arial";
@@ -11,7 +10,6 @@
     -fx-font-weight: bold;
 
 }
-
 
 Label {
 	-fx-text-fill: #3a424f;
