@@ -59,37 +59,14 @@ public class LoginScene {
 
         Scene scene = new Scene(susun, 640, 480);
         scene.getStylesheets().add(getClass().getResource("/styles/login_style.css").toExternalForm());
-
-        Mencocokkan(tfName, tfPass);
+        // ImageView ivBackground = new ImageView("/gambar/bg.png");
+        // ivBackground.setFitWidth(scene.getWidth());
+        // ivBackground.setFitHeight(scene.getHeight());
+        // susun.getChildren().add(ivBackground);
 
         stage.setScene(scene);
 
     }
-
-    public void Mencocokkan(TextField username, TextField password) {
-        
-    }
-
-    // public static void main(String[] args) {
-    //     // LoginModel.list
-    // }
-
-
-    // public void makeProduck() {
-    //     String[] listImagePath = { "/gambar/icon_1.png", "/images/icon_2.png" };
-    //     String[] listTitle = { "Daftar Apoteker", "Daftar Obat" };
-    //     HBox[] listHboxMenu = new HBox[2];
-
-    //     for (int i = 0; i < listHboxMenu.length; i++) {
-    //         ImageView ivIcon = new ImageView(listImagePath[i]);
-    //         Label labelMenu = new Label(listTitle[i]);
-    //         labelMenu.getStyleClass().add("label-menu");
-    //         listHboxMenu[i] = new HBox(ivIcon, labelMenu);
-    //         listHboxMenu[i].setPadding(new Insets(12, 20, 12, 20));
-    //         listHboxMenu[i].setSpacing(4);
-    //     }
-    // }
-
 
 
     public static void main(String[] args) {
