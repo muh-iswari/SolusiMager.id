@@ -1,26 +1,14 @@
 package id.npad93.p9.Scenes;
 
 
-import javax.security.auth.login.LoginContext;
-import javax.swing.Icon;
-
-
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.SplitPane;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -135,10 +123,8 @@ public class MakananRinganScene {
     
 
     public void show() {
-        // Menambahkan nilai ke list
-
        // Membuat label
-       Label labelWarungku = new Label("SolusiMager.id");
+       Label labelWarungku = new Label("Makanan Ringan");
        labelWarungku.setId("text");
        labelWarungku.setAlignment(Pos.CENTER);
        labelWarungku.setStyle("-fx-padding: 6px;");
@@ -168,15 +154,11 @@ public class MakananRinganScene {
        atas.setId("atas");
        atas.setStyle("-fx-padding: 4px;");
 
-
-        Label labelMenu = new Label("Perawatan Tubuh");
-        labelMenu.setId("text");
-        labelMenu.setStyle("-fx-font-size: 16; -fx-font-weight: bold;");
-        
         VBox vbMenu = new VBox(MembuatTampilan());
         vbMenu.setAlignment(Pos.CENTER);
         ScrollPane scrollPane = new ScrollPane(vbMenu);
-        VBox vbTampilan = new VBox(10, labelMenu, scrollPane);
+        scrollPane.setId("scroll-pane");
+        VBox vbTampilan = new VBox(10,  scrollPane);
         vbTampilan.setAlignment(Pos.CENTER);
 
 

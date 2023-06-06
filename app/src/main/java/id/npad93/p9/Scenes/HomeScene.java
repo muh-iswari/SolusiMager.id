@@ -1,18 +1,11 @@
 package id.npad93.p9.Scenes;
 
-
-import javax.security.auth.login.LoginContext;
-import javax.swing.Icon;
-
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.SplitPane;
-import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -25,7 +18,7 @@ public class HomeScene {
 
     public HomeScene(Stage stage) {
         this.stage = stage;
-        stage.setTitle("firt-stage");
+        stage.setTitle("SolusiMager.id");
     }
 
     public void show() {
@@ -46,10 +39,6 @@ public class HomeScene {
         tRight.getStyleClass().add("title-text-right");
         TextFlow tfTitle = new TextFlow(tLeft, tRight);
 
-
-        
-
-
         // Text Desc
         Label lblDesc = new Label(
         "Hai! Aku SolusiMager.id.\nSaya siap memudahkanmu dalam mencari kebutuhan sehari-hari.");
@@ -66,7 +55,7 @@ public class HomeScene {
 
         // VBOX layout
         VBox vtengah = new VBox(tfTitle, lblDesc, space);
-        VBox vLayout = new VBox(20, vtengah, btnExplore);
+        VBox vLayout = new VBox(40, vtengah, btnExplore);
         vtengah.setSpacing(10);
         VBox vbAll = new VBox(20,  vLayout);
         vbAll.setAlignment(Pos.CENTER);

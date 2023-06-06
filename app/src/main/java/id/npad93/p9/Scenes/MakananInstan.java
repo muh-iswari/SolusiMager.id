@@ -37,7 +37,7 @@ public class MakananInstan {
         // Menambahkan nilai ke list
 
        // Membuat label
-       Label labelWarungku = new Label("SolusiMager.id");
+       Label labelWarungku = new Label("Makanan Instan");
        labelWarungku.setId("text");
        labelWarungku.setAlignment(Pos.CENTER);
        labelWarungku.setStyle("-fx-padding: 6px;");
@@ -67,15 +67,12 @@ public class MakananInstan {
        atas.setId("atas");
        atas.setStyle("-fx-padding: 4px;");
 
-
-        Label labelMenu = new Label("Makanan Instan");
-        labelMenu.setId("text");
-        labelMenu.setStyle("-fx-font-size: 16; -fx-font-weight: bold;");
         
         VBox vbMenu = new VBox(MembuatTampilan());
         vbMenu.setAlignment(Pos.CENTER);
         ScrollPane scrollPane = new ScrollPane(vbMenu);
-        VBox vbTampilan = new VBox(10, labelMenu, scrollPane);
+        scrollPane.setId("scroll-pane");
+        VBox vbTampilan = new VBox(10, scrollPane);
         vbTampilan.setAlignment(Pos.CENTER);
 
 

@@ -1,23 +1,23 @@
 #judul {
-	-fx-fill: rgb(231, 220, 198);
-	-fx-font-size: 20px;
-    -fx-font-family: "Arial";
+	-fx-fill: rgb(0, 0, 0);
+	-fx-font-size: 16px;
+    -fx-font-family: "Open Sans";
 	-fx-font-weight: bold;
 }
 
-#tombol_logIn {
-	-fx-background-color: rgb(231, 220, 198);
+#tombol {
+	-fx-background-color: rgb(255, 255, 255);
 	-fx-font-weight: bold;
-    -fx-font-size: 12px;
-	-fx-min-width: 70px;
-	-fx-min-height: 30px;
-	-fx-max-width: 100px;
-	-fx-max-height: 30px;
-    -fx-background-radius: 12px;
+    -fx-font-size: 14px;
+	-fx-min-width: 250px;
+	-fx-min-height: 40px;
+	-fx-max-width: 250px;
+	-fx-max-height: 40px;
+    -fx-background-radius: 10px;
 }
 
 #atas {
-	-fx-background-color: rgb(255, 255, 255);
+	-fx-background-color: rgb(243, 239, 153);
 	-fx-min-width: 640px;
 	-fx-min-height: 40px;
 	-fx-max-width: 640px;
@@ -26,36 +26,71 @@
 }
 
 #Botton {
-	-fx-background-color: orange;
+	-fx-background-color:rgb(243, 239, 153);
     -fx-font-size: 12px;
 	-fx-min-width: 120px;
 	-fx-min-height: 35px;
 	-fx-max-width: 120px;
 	-fx-max-height: 35px;
     -fx-background-radius: 12px;
-    -fx-fill: "#79E0EE";
+    -fx-fill: #ffffff;
+
 }
 
 #lebel {
-	-fx-background-color:rgb(255, 255, 255);
+	-fx-background-color:#ffffff;
     -fx-font-size: 12px;
 	-fx-min-width: 120px;
-	-fx-min-height: 40px;
+	-fx-min-height: 20px;
 	-fx-max-width: 100px;
-	-fx-max-height: 30px;
-    -fx-background-radius: 12px;
+	-fx-max-height: 20px;
+    -fx-background-radius: 7px;
     -fx-fill: "#79E0EE";
 
 }
 
-HBox {
-	-fx-background-color: hwb(0 0% 19%);
-	-fx-background-radius: 5px;
-	/* -fx-min-width: 300px;
-	-fx-min-height: 100px;
-	-fx-max-width: 300px;
-	-fx-max-height: 100px; */
-    -fx-fill: "#79E0EE";
-	-fx-padding: 5;
 
+#Logout-button {
+	-fx-background-color: rgb(255, 0, 0);
+    -fx-font-size: 12px;
+	-fx-min-width: 20px;
+	-fx-min-height: 30px;
+	-fx-max-width: 80px;
+	-fx-max-height: 12px;
+    -fx-background-radius: 7px;
+    -fx-font-weight: bold;
 }
+
+
+#back-button {
+	-fx-background-color: rgb(237, 236, 158);
+    -fx-font-size: 12px;
+	-fx-min-width: 20px;
+	-fx-min-height: 30px;
+	-fx-max-width: 100px;
+	-fx-max-height: 20px;
+    -fx-background-radius: 7px;
+    -fx-font-weight: bold;
+}
+
+.scroll-pane {
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: never;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+#back-button:hover {
+    -fx-background-color: orange;
+}
+
+
+#vbox-produck {
+    -fx-effect: dropshadow(gaussian, orange, 2, 1, 3, 1);
+}
+
+/* .vbox {
+    -fx-effect: dropshadow(gaussian, <warna>, <radius>, <spread>, <offsetX>, <offsetY>);
+} */

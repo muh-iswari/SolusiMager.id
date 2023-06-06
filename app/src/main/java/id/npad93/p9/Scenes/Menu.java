@@ -5,12 +5,11 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 
 public class Menu extends Application {
 
@@ -60,30 +59,35 @@ public class Menu extends Application {
             MenuSembako menuSembako = new MenuSembako(stage);
             menuSembako.kategori();
         });
+
         Button btn2 = new Button("Perawatan Tubuh");
         btn2.setId("tombol");
         btn2.setOnAction(v -> {
-            PTubuhScene pTubuhScene = new PTubuhScene(stage);
-            pTubuhScene.show();
+            MenuPerawatanTubuh menuPerawatanTubuh = new MenuPerawatanTubuh(stage);
+            menuPerawatanTubuh.kategori();
         });
+
         Button btn3 = new Button("Makanan Instan");
         btn3.setId("tombol");
         btn3.setOnAction(v -> {
             MenuMakananInstan menuMakananInstan = new MenuMakananInstan(stage);
             menuMakananInstan.kategori();
         });
+
         Button btn4 = new Button("Bumbu Masak");
         btn4.setId("tombol");
         btn4.setOnAction(v -> {
             MenuBumbuMasak menuBumbuMasak = new MenuBumbuMasak(stage);
             menuBumbuMasak.kategori();
         });
+        
         Button btn5 = new Button("Makanan Ringan");
         btn5.setId("tombol");
         btn5.setOnAction(v -> {
             MenuMakananRingan menuMakananRingan = new MenuMakananRingan(stage);
             menuMakananRingan.kategori();
         });
+
         VBox vbKategori = new VBox(10, btn1, btn2, btn3, btn4, btn5);
         vbKategori.setAlignment(Pos.CENTER);
 
@@ -108,6 +112,8 @@ public class Menu extends Application {
         stage.show();
     }
 }
+
+
 
 abstract class PilihanMenu {
     Stage stage;
@@ -146,8 +152,8 @@ class MenuBumbuMasak extends PilihanMenu {
 
     @Override
     public void kategori() {
-        BumbuScene mainScene = new BumbuScene(stage);
-        mainScene.show();
+        BumbuScene bumbuScene = new BumbuScene(stage);
+        bumbuScene.show();
     }
 }
 
@@ -170,9 +176,12 @@ class MenuMakananRingan extends PilihanMenu {
 
     @Override
     public void kategori() {
-        HomeScene homeScene = new HomeScene(stage);
-        homeScene.show();
+        MakananRinganScene makananRinganScene = new MakananRinganScene(stage);
+        makananRinganScene.show();
     }
 
 }
+
+
+
 

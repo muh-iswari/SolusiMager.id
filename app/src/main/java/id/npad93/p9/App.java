@@ -4,11 +4,6 @@
 package id.npad93.p9;
 
 import id.npad93.p9.Scenes.HomeScene;
-import id.npad93.p9.Scenes.MakananRinganScene;
-import id.npad93.p9.Scenes.BumbuScene;
-import id.npad93.p9.Scenes.Menu;
-import id.npad93.p9.Scenes.PTubuhScene;
-// import id.npad93.p9.Scenes.PTubuhScene;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -22,18 +17,6 @@ public class App extends Application {
         //stage
         HomeScene homeScene = new HomeScene(stage);
         homeScene.show();
-        // MakananRinganScene MakananRinganScene = new MakananRinganScene(stage);
-        // MakananRinganScene.show();
-        // LoginScene LoginScene = new LoginScene(stage);
-        // LoginScene.show();
-        // WarungkuScene warungkuScene = new WarungkuScene(stage);
-        // warungkuScene.show();
-        // MainScene mainScene = new MainScene(stage);
-        // mainScene.show();
-        // HomeScene homeScene = new HomeScene(stage);
-        // homeScene.show();
-        // Menu menu = new Menu(stage);
-        // menu.show();
         stage.setTitle("SolusiMager.id");
         stage.setResizable(false);
         stage.show();

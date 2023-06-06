@@ -15,12 +15,12 @@ import javafx.stage.Stage;
 public class BumbuScene {
     private Stage stage;
     private int uang = 100000;
-    String[] listImagePath = {"/gambar/royco.jpg", "/gambar/ladaku.jpg", 
-    "/gambar/saus tomat.jpg", "/gambar/kecap.jpg", "/gambar/sambal.jpg"};
-    String[] nama = {"Royco 460g", "Ladaku Sachet", "ABC Saus Tomat 275ml", 
+    String[] listImagePath = {"/gambar/rawon.jpg", "/gambar/ladaku2.jpg", "/gambar/santan.jpg",
+    "/gambar/saus_tomat.jpg", "/gambar/kecap.jpg", "/gambar/sambal.jpg"};
+    String[] nama = {"Kraton Bumbu Rawon", "Ladaku Sachet", "Santan Sun Kara 200 ml", "ABC Saus Tomat 275ml", 
     "ABC Kecap Pedas Manis 135ml", "Uleg Sambal Bawang 1pack"};
-    int[] stock = {19, 12, 32, 10, 5, 8};
-    int[] harga = {65000, 8000, 5000, 30000, 21000, 5000};
+    int[] stock = {3, 12, 32, 10, 5, 8};
+    int[] harga = {15000, 8000, 10000, 30000, 21000, 5000};
 
     public Stage getStage() {
         return stage;
@@ -33,10 +33,9 @@ public class BumbuScene {
     
 
     public void show() {
-        // Menambahkan nilai ke list
 
        // Membuat label
-       Label labelWarungku = new Label("SolusiMager.id");
+       Label labelWarungku = new Label("Bumbu Masak");
        labelWarungku.setId("text");
        labelWarungku.setAlignment(Pos.CENTER);
        labelWarungku.setStyle("-fx-padding: 6px;");
@@ -62,19 +61,16 @@ public class BumbuScene {
        // Membuat HBox atas
        HBox atas = new HBox(150, btnBack, labelWarungku, btnLogout);
        atas.setAlignment(Pos.TOP_CENTER);
-       atas.setMaxSize(640, 20);
+       atas.setMaxSize(640, 25);
        atas.setId("atas");
        atas.setStyle("-fx-padding: 4px;");
 
-
-        Label labelMenu = new Label("Makanan Instan");
-        labelMenu.setId("text");
-        labelMenu.setStyle("-fx-font-size: 16; -fx-font-weight: bold;");
         
         VBox vbMenu = new VBox(MembuatTampilan());
         vbMenu.setAlignment(Pos.CENTER);
         ScrollPane scrollPane = new ScrollPane(vbMenu);
-        VBox vbTampilan = new VBox(10, labelMenu, scrollPane);
+        scrollPane.setId("scroll-pane");
+        VBox vbTampilan = new VBox(10, scrollPane);
         vbTampilan.setAlignment(Pos.CENTER);
 
 
@@ -85,7 +81,7 @@ public class BumbuScene {
  
  
          Scene scene = new Scene(susun, 640, 480);
-         scene.getStylesheets().add(getClass().getResource("/styles/menu_style.css").toExternalForm());
+         scene.getStylesheets().add(getClass().getResource("/styles/main_style.css").toExternalForm());
  
  
          stage.setScene(scene);
@@ -159,6 +155,7 @@ public class BumbuScene {
         // Gabungkan kedlam VBox
         VBox vbProduck = new VBox(10, lbProduck, lbStok, lbHarga, beliProduck);
         HBox hbProduck = new HBox(7, ivProduck, vbProduck);
+        
         hbProduck.setMaxWidth(280);
         hbProduck.setMinWidth(280);
 
@@ -172,8 +169,7 @@ public class BumbuScene {
         lbProduck2.getStyleClass().add("desc-text");
         lbProduck2.setWrapText(true);
         lbProduck2.setMaxWidth(150);
-        lbProduck2.setStyle("-fx-font-weight: bold;");
-        Label lbHarga2 = new Label("Harga : Rp. " + Integer.toString(harga[2]));
+        Label lbHarga2 = new Label("Harga : Rp. " + Integer.toString(harga[1]));
         Label lbStok2 = new Label("Stok : " + Integer.toString(stock[1]));
         Button beliProduck2 = new Button("Beli"); 
         // Tombol Beli Produck2
@@ -187,13 +183,15 @@ public class BumbuScene {
         // hbCuciMuka.setStyle("-fx-background-colour: red");
 
         // Membuat Hboxnya
-        HBox hbMenu = new HBox(20, hbProduck, hbProduck2);
+        HBox hbMenu = new HBox(30, hbProduck, hbProduck2);
+        
         hbMenu.setMaxWidth(640);
+        hbMenu.setMinWidth(640);
         hbMenu.setAlignment(Pos.CENTER);
         hbMenu.setId("produck");
 
 
-        
+
 
         // Membuat Produck 3 dan 4
         // Produk sebelah kanan
@@ -227,7 +225,6 @@ public class BumbuScene {
         lbPProduck4.getStyleClass().add("desc-text");
         lbPProduck4.setWrapText(true);
         lbPProduck4.setMaxWidth(150);
-        lbPProduck4.setStyle("-fx-font-weight: bold;");
         Label lbHarga4 = new Label("Harga : Rp. " + Integer.toString(harga[3]));
         Label lbStok4 = new Label("Stok : " + Integer.toString(stock[3]));
         Button beliPProduck4 = new Button("Beli"); 
@@ -242,8 +239,9 @@ public class BumbuScene {
         // hbCuciMuka.setStyle("-fx-background-colour: red");
 
         // Membuat Hboxnya
-        HBox hbMenu2 = new HBox(20, hbProduck3, hbPProduck4);
+        HBox hbMenu2 = new HBox(30, hbProduck3, hbPProduck4);
         hbMenu2.setMaxWidth(640);
+        // hbMenu2.setMinWidth(640);
         hbMenu2.setAlignment(Pos.CENTER);
         hbMenu2.setId("produck");
 
@@ -281,7 +279,6 @@ public class BumbuScene {
         lbPProduck6.getStyleClass().add("desc-text");
         lbPProduck6.setWrapText(true);
         lbPProduck6.setMaxWidth(150);
-        lbPProduck6.setStyle("-fx-font-weight: bold;");
         Label lbHarga6 = new Label("Harga : Rp. " + Integer.toString(harga[5]));
         Label lbStok6 = new Label("Stok : " + Integer.toString(stock[5]));
         Button beliPProduck6 = new Button("Beli"); 
@@ -296,18 +293,17 @@ public class BumbuScene {
         // hbCuciMuka.setStyle("-fx-background-colour: red");
 
         // Membuat Hboxnya
-        HBox hbMenu3 = new HBox(20, hbProduck5, hbPProduck6);
+        HBox hbMenu3 = new HBox(30, hbProduck5, hbPProduck6);
         hbMenu3.setMaxWidth(640);
+        hbMenu3.setMinWidth(640);
         hbMenu3.setAlignment(Pos.CENTER);
         hbMenu3.setId("produck");
 
 
-        VBox vbAll = new VBox(7, hbMenu, hbMenu2, hbMenu3);
+        VBox vbAll = new VBox(13, hbMenu, hbMenu2, hbMenu3);
+        vbAll.setAlignment(Pos.CENTER);
         return vbAll;
 
     }
 }
-
-
-
 

@@ -37,7 +37,7 @@ public class PTubuhScene {
         // Menambahkan nilai ke list
 
        // Membuat label
-       Label labelWarungku = new Label("SolusiMager.id");
+       Label labelWarungku = new Label("Perawatan Tubuh");
        labelWarungku.setId("text");
        labelWarungku.setAlignment(Pos.CENTER);
        labelWarungku.setStyle("-fx-padding: 6px;");
@@ -66,16 +66,12 @@ public class PTubuhScene {
        atas.setMaxSize(640, 20);
        atas.setId("atas");
        atas.setStyle("-fx-padding: 4px;");
-
-
-        Label labelMenu = new Label("Makanan Instan");
-        labelMenu.setId("text");
-        labelMenu.setStyle("-fx-font-size: 16; -fx-font-weight: bold;");
         
         VBox vbMenu = new VBox(MembuatTampilan());
         vbMenu.setAlignment(Pos.CENTER);
         ScrollPane scrollPane = new ScrollPane(vbMenu);
-        VBox vbTampilan = new VBox(10, labelMenu, scrollPane);
+        scrollPane.setId("scroll-pane");
+        VBox vbTampilan = new VBox(10, scrollPane);
         vbTampilan.setAlignment(Pos.CENTER);
 
 
@@ -141,7 +137,7 @@ public class PTubuhScene {
 
     public VBox MembuatTampilan() {
         // Membuat Produck 1 dan 2
-        // Produk sebelah kanan
+        // Produk sebelah kiri
         ImageView ivProduck = new ImageView(listImagePath[0]);
         ivProduck.setFitHeight(150);
         ivProduck.setFitWidth(150);
@@ -163,11 +159,12 @@ public class PTubuhScene {
         hbProduck.setMinWidth(280);
 
 
-        // Produk sebelah kiri
+        // Produk sebelah kanan
         ImageView ivProduck2 = new ImageView(listImagePath[1]);
         ivProduck2.setFitHeight(150);
         ivProduck2.setFitWidth(150);
         Label lbProduck2 = new Label(nama[1]);
+        lbProduck2.setStyle("-fx-font-weight: bold;");
         // Label labelHargaProduck2 = new Label("Rp" + hargaProduck2);
         lbProduck2.getStyleClass().add("desc-text");
         lbProduck2.setWrapText(true);
@@ -195,7 +192,7 @@ public class PTubuhScene {
 
 
         // Membuat Produck 3 dan 4
-        // Produk sebelah kanan
+        // Produk sebelah kiri
         ImageView ivProduck3 = new ImageView(listImagePath[2]);
         ivProduck3.setFitHeight(150);
         ivProduck3.setFitWidth(150);
@@ -217,15 +214,17 @@ public class PTubuhScene {
         hbProduck3.setMinWidth(280);
 
 
-        // Produk sebelah kiri
+        // Produk sebelah kanan
         ImageView ivProduck4 = new ImageView(listImagePath[3]);
         ivProduck4.setFitHeight(150);
         ivProduck4.setFitWidth(150);
-        Label lbPProduck4 = new Label(nama[3]);
+        Label lbProduck4 = new Label(nama[3]);
+        lbProduck4.setStyle("-fx-font-weight: bold;");
+        lbProduck4.getStyleClass().add("desc-text");
         // Label labelHargaPProduck4 = new Label("Rp" + hargaPProduck4);
-        lbPProduck4.getStyleClass().add("desc-text");
-        lbPProduck4.setWrapText(true);
-        lbPProduck4.setMaxWidth(150);
+        lbProduck4.getStyleClass().add("desc-text");
+        lbProduck4.setWrapText(true);
+        lbProduck4.setMaxWidth(150);
         Label lbHarga4 = new Label("Harga : Rp. " + Integer.toString(harga[3]));
         Label lbStok4 = new Label("Stok : " + Integer.toString(stock[3]));
         Button beliPProduck4 = new Button("Beli"); 
@@ -233,7 +232,7 @@ public class PTubuhScene {
         beliPProduck4.setOnAction(event -> {konfirmasiPembelian(3, lbStok4);});
 
         // Gabungkan kedlam VBox
-        VBox vbPProduck4 = new VBox(10, lbPProduck4, lbStok4, lbHarga4, beliPProduck4);
+        VBox vbPProduck4 = new VBox(10, lbProduck4, lbStok4, lbHarga4, beliPProduck4);
         HBox hbPProduck4 = new HBox(7, ivProduck4, vbPProduck4);
         hbPProduck4.setMaxWidth(280);
         hbPProduck4.setMinWidth(280);
@@ -248,11 +247,13 @@ public class PTubuhScene {
 
 
         // Membuat Produck 5 dan 6
-        // Produk sebelah kanan
+        // Produk sebelah kiri
         ImageView ivProduck5 = new ImageView(listImagePath[4]);
         ivProduck5.setFitHeight(150);
         ivProduck5.setFitWidth(150);
         Label lbProduck5 = new Label(nama[4]);
+        lbProduck5.setStyle("-fx-font-weight: bold;");
+        lbProduck5.getStyleClass().add("desc-text");
         lbProduck5.setWrapText(true);
         lbProduck5.setMaxWidth(150);
         lbProduck5.setStyle("-fx-font-weight: bold;");
@@ -270,12 +271,13 @@ public class PTubuhScene {
         hbProduck5.setMinWidth(280);
 
 
-        // Produk sebelah kiri
+        // Produk sebelah kanan
         ImageView ivProduck6 = new ImageView(listImagePath[5]);
         ivProduck6.setFitHeight(150);
         ivProduck6.setFitWidth(150);
         Label lbPProduck6 = new Label(nama[5]);
         // Label labelHargaPProduck6 = new Label("Rp" + hargaPProduck6);
+        lbProduck3.setStyle("-fx-font-weight: bold;");
         lbPProduck6.getStyleClass().add("desc-text");
         lbPProduck6.setWrapText(true);
         lbPProduck6.setMaxWidth(150);
